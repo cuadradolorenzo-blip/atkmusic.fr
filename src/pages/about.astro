@@ -1,0 +1,77 @@
+---
+import "../styles/global.css";
+
+const year = new Date().getFullYear();
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>À propos — ATK Music</title>
+  </head>
+  <body class="bg-gray-950 text-white">
+    <!-- Navbar -->
+    <nav class="w-full bg-gray-950/80 backdrop-blur border-b border-white/10 fixed top-0 z-50">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/" class="flex items-center space-x-3">
+          <div class="flex items-center justify-center w-12 h-12 bg-white rounded-full overflow-hidden">
+            <img src="/images/LOGOVF.png" alt="ATK Music Logo" class="h-12 w-auto scale-120" />
+          </div>
+          <span class="font-bold text-lg">ATK Music</span>
+        </a>
+        <ul class="hidden md:flex space-x-8 font-medium">
+          <li><a href="/" class="hover:text-blue-400 transition">Accueil</a></li>
+          <li><a href="/services" class="hover:text-blue-400 transition">Services</a></li>
+          <li><a href="/about" class="text-blue-400 font-semibold">À propos</a></li>
+          <li><a href="/contact" class="hover:text-blue-400 transition">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="pt-28 max-w-4xl mx-auto px-6 py-16">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-8">À propos</h1>
+
+      <p class="text-lg text-gray-300 mb-6">
+        Je m’appelle Lorenzo Cuadrado, fondateur d’<strong>ATK Music</strong>. 
+        Passionné par le son et la création musicale depuis de nombreuses années, 
+        j’ai transformé ma passion en un métier : aider les entreprises, créateurs et agences 
+        à donner plus d’impact à leurs contenus grâce à un univers sonore unique.
+      </p>
+
+      <p class="text-lg text-gray-300 mb-6">
+        Mon parcours a commencé dans le <strong>beatmaking et la production musicale</strong>, 
+        avant de me spécialiser dans le <strong>sound design</strong>, 
+        le <strong>mixage/mastering</strong> et la création de contenus audio et vidéo. 
+        J’ai développé ATK Music pour offrir des prestations professionnelles accessibles, 
+        que ce soit pour un spot publicitaire, un podcast, ou encore une identité sonore sur mesure.
+      </p>
+
+      <p class="text-lg text-gray-300 mb-6">
+        Mon objectif est simple : <em>rendre vos messages plus mémorables grâce à la puissance du son</em>. 
+        Dans un monde où l’image est partout, un son de qualité fait la différence entre un contenu oublié et un contenu qui marque les esprits.
+      </p>
+
+      <div class="mt-12 p-8 rounded-2xl bg-white/5 border border-white/10">
+        <h2 class="text-2xl font-bold mb-4">Pourquoi travailler avec moi ?</h2>
+        <ul class="list-disc pl-6 space-y-2 text-gray-300">
+          <li>🎧 Une expertise à la fois musicale et technique</li>
+          <li>⚡ Des livrables rapides et adaptés à vos besoins</li>
+          <li>📢 Un accompagnement personnalisé pour chaque projet</li>
+          <li>🎬 La capacité de gérer son + image (mixage audio & montage vidéo)</li>
+        </ul>
+      </div>
+
+      <div class="mt-16 text-center">
+        <a href="/contact" class="px-8 py-4 rounded-xl bg-blue-500 hover:bg-blue-600 font-medium">
+          Discutons de votre projet
+        </a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
+      <p>© {year} ATK Music — Tous droits réservés</p>
+    </footer>
+  </body>
+</html>

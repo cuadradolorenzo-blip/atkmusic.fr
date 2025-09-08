@@ -1,0 +1,69 @@
+---
+import "../styles/global.css";
+const year = new Date().getFullYear();
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Politique de confidentialité — ATK Music</title>
+  </head>
+  <body class="bg-gray-950 text-white">
+    <!-- Navbar -->
+    <nav class="w-full bg-gray-950/80 backdrop-blur border-b border-white/10 fixed top-0 z-50">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/" class="flex items-center space-x-3">
+          <div class="flex items-center justify-center w-12 h-12 bg-white rounded-full overflow-hidden">
+            <img src="/images/LOGOVF.png" alt="ATK Music Logo" class="h-10 w-auto object-contain" />
+          </div>
+          <span class="font-bold text-lg">ATK Music</span>
+        </a>
+        <ul class="hidden md:flex space-x-8 font-medium">
+          <li><a href="/" class="hover:text-blue-400 transition">Accueil</a></li>
+          <li><a href="/services" class="hover:text-blue-400 transition">Services</a></li>
+          <li><a href="/about" class="hover:text-blue-400 transition">À propos</a></li>
+          <li><a href="/contact" class="hover:text-blue-400 transition">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="pt-28 max-w-4xl mx-auto px-6 py-16">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-8">Politique de confidentialité</h1>
+
+      <p class="text-gray-300 mb-6">
+        La présente politique explique comment ATK Music collecte, utilise et protège les données personnelles 
+        que vous pouvez transmettre via ce site.
+      </p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-2">Collecte des données</h2>
+      <p class="text-gray-300">
+        Les seules données collectées via ce site sont celles que vous fournissez volontairement 
+        via le formulaire de contact (nom, email, message).
+      </p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-2">Utilisation des données</h2>
+      <p class="text-gray-300">
+        Vos informations sont utilisées uniquement pour répondre à vos demandes et ne sont jamais partagées 
+        avec des tiers sans votre accord.
+      </p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-2">Conservation</h2>
+      <p class="text-gray-300">
+        Les données envoyées via le formulaire de contact sont conservées uniquement le temps 
+        de traiter votre demande, puis supprimées.
+      </p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-2">Vos droits</h2>
+      <p class="text-gray-300">
+        Conformément au RGPD, vous disposez d’un droit d’accès, de rectification et de suppression 
+        de vos données. Pour toute demande, contactez : 
+        <a href="mailto:contact@atkmusic.fr" class="text-blue-400">contact@atkmusic.fr</a>.
+      </p>
+    </main>
+
+    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
+      <p>© {year} ATK Music — Tous droits réservés</p>
+    </footer>
+  </body>
+</html>

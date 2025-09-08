@@ -1,0 +1,76 @@
+---
+import "../styles/global.css";
+const year = new Date().getFullYear();
+---
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — ATK Music</title>
+</head>
+<body class="bg-gray-950 text-white">
+  <!-- Navbar -->
+  <nav class="w-full bg-gray-950/80 backdrop-blur border-b border-white/10 fixed top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/" class="flex items-center space-x-3">
+        <div class="flex items-center justify-center w-12 h-12 bg-white rounded-full overflow-hidden">
+          <img src="/images/LOGOVF.png" alt="ATK Music Logo"   class="h-12 w-auto scale-120" />
+        </div>
+        <span class="font-bold text-lg">ATK Music</span>
+      </a>
+      <ul class="hidden md:flex space-x-8 font-medium">
+        <li><a href="/" class="hover:text-blue-400 transition">Accueil</a></li>
+        <li><a href="/services" class="hover:text-blue-400 transition">Services</a></li>
+        <li><a href="/about" class="hover:text-blue-400 transition">À propos</a></li>
+        <li><a href="/contact" class="text-blue-400 font-semibold">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="pt-28 max-w-3xl mx-auto px-6 py-16">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-8">Contact</h1>
+    <p class="text-lg text-gray-300 mb-6">
+      Une question, un projet ou une demande de devis ?  
+      N’hésitez pas à m’écrire via ce formulaire ou directement à  
+      <a href="mailto:contact@atkmusic.fr" class="text-blue-400 hover:underline">contact@atkmusic.fr</a>.
+    </p>
+
+    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+      <!-- Ta clé Web3Forms -->
+      <input type="hidden" name="access_key" value="6d49e386-caf8-4d44-95a4-c6b7298d704e" />
+
+      <div>
+        <label for="name" class="block mb-2 text-sm font-medium">Nom</label>
+        <input type="text" id="name" name="name" required
+               class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+      </div>
+
+      <div>
+        <label for="email" class="block mb-2 text-sm font-medium">Email</label>
+        <input type="email" id="email" name="email" required
+               class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+      </div>
+
+      <div>
+        <label for="message" class="block mb-2 text-sm font-medium">Message</label>
+        <textarea id="message" name="message" rows="5" required
+                  class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
+      </div>
+
+      <button type="submit" class="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg font-semibold">
+        Envoyer
+      </button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm mt-16">
+    <p>© {year} ATK Music — Tous droits réservés</p>
+    <div class="mt-2 space-x-4">
+      <a href="/mentions-legales" class="hover:text-white">Mentions légales</a>
+      <a href="/confidentialite" class="hover:text-white">Confidentialité</a>
+    </div>
+  </footer>
+</body>
+</html>

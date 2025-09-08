@@ -1,0 +1,49 @@
+---
+import "../styles/global.css";
+const year = new Date().getFullYear();
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page introuvable — ATK Music</title>
+  </head>
+  <body class="bg-gray-950 text-white">
+    <!-- Navbar -->
+    <nav class="w-full bg-gray-950/80 backdrop-blur border-b border-white/10 fixed top-0 z-50">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/" class="flex items-center space-x-3">
+          <div class="flex items-center justify-center w-12 h-12 bg-white rounded-full overflow-hidden">
+            <img src="/images/LOGOVF.png" alt="ATK Music Logo" class="h-10 w-auto object-contain" />
+          </div>
+          <span class="font-bold text-lg">ATK Music</span>
+        </a>
+        <ul class="hidden md:flex space-x-8 font-medium">
+          <li><a href="/" class="hover:text-blue-400 transition">Accueil</a></li>
+          <li><a href="/services" class="hover:text-blue-400 transition">Services</a></li>
+          <li><a href="/about" class="hover:text-blue-400 transition">À propos</a></li>
+          <li><a href="/contact" class="hover:text-blue-400 transition">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contenu -->
+    <main class="pt-28 flex flex-col items-center justify-center min-h-[70vh] text-center px-6">
+      <h1 class="text-8xl md:text-9xl font-extrabold text-blue-500">404</h1>
+      <p class="mt-6 text-2xl font-semibold text-white">Oups ! Cette page est introuvable.</p>
+      <p class="mt-2 text-gray-400 max-w-xl">
+        Il semble que l’adresse soit incorrecte ou que la page ait été déplacée.
+      </p>
+
+      <a href="/" class="mt-8 px-6 py-3 rounded-xl bg-blue-500 hover:bg-blue-600 font-medium">
+        Retour à l’accueil
+      </a>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm mt-16">
+      <p>© {year} ATK Music — Tous droits réservés</p>
+    </footer>
+  </body>
+</html>

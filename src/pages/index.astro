@@ -1,5 +1,8 @@
 ---
 import "../styles/global.css";
+
+// Pour afficher l'année automatiquement
+const year = new Date().getFullYear();
 ---
 
 <html lang="fr">
@@ -8,21 +11,87 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ATK Music</title>
   </head>
-  <body class="min-h-screen bg-gray-950 text-white">
-    <main class="mx-auto max-w-4xl px-6 py-16">
-      <header class="mb-12">
-        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">ATK Music</h1>
-        <p class="mt-4 text-lg text-gray-300">Création sonore, mixage & contenu audio/vidéo pour entreprises.</p>
-      </header>
+  <body class="bg-gray-950 text-white">
+    <!-- Navbar -->
+    <nav class="w-full bg-gray-950/80 backdrop-blur border-b border-white/10 fixed top-0 z-50">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- Logo -->
+       <a href="/" class="flex items-center space-x-3">
+  <div class="flex items-center justify-center w-12 h-12 bg-white rounded-full overflow-hidden">
+    <img src="/images/LOGOVF.png" 
+         alt="ATK Music Logo" 
+         class="h-12 w-auto scale-120" />
+  </div>
+  <span class="font-bold text-lg">ATK Music</span>
+</a>
 
-      <section class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur">
-        <h2 class="text-2xl font-semibold">Site en construction</h2>
-        <p class="mt-2 text-gray-300">Bientôt : prestations, portfolio, contact et devis.</p>
-        <a href="mailto:contact@atkmusic.fr"
-           class="mt-6 inline-block rounded-xl px-5 py-3 font-medium ring-1 ring-white/20 hover:bg-white/10">
-          Me contacter
+
+
+        <!-- Menu -->
+        <ul class="hidden md:flex space-x-8 font-medium">
+          <li><a href="/" class="hover:text-blue-400 transition">Accueil</a></li>
+          <li><a href="/services" class="hover:text-blue-400 transition">Services</a></li>
+          <li><a href="/about" class="hover:text-blue-400 transition">À propos</a></li>
+          <li><a href="/contact" class="hover:text-blue-400 transition">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="pt-28">
+      <!-- Hero Section -->
+      <section class="max-w-6xl mx-auto px-6 py-20 text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+          Le son qui capte l’attention
+        </h1>
+        <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
+          Mixage, sound design et montage audio/vidéo pour vos projets professionnels.
+        </p>
+        <div class="mt-8 flex justify-center space-x-4">
+          <a href="/services" class="px-6 py-3 rounded-xl bg-blue-500 hover:bg-blue-600 font-medium">
+            Découvrir mes services
+          </a>
+          <a href="/contact" class="px-6 py-3 rounded-xl ring-1 ring-white/30 hover:bg-white/10 font-medium">
+            Me contacter
+          </a>
+        </div>
+      </section>
+
+      <!-- Aperçu Services -->
+      <section class="max-w-6xl mx-auto px-6 py-16 grid gap-8 md:grid-cols-4 text-center">
+        <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+          <span class="text-3xl">🎙️</span>
+          <h3 class="mt-4 text-xl font-semibold">Mixage & Voix-off</h3>
+        </div>
+        <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+          <span class="text-3xl">🎛️</span>
+          <h3 class="mt-4 text-xl font-semibold">Sound Design</h3>
+        </div>
+        <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+          <span class="text-3xl">🎬</span>
+          <h3 class="mt-4 text-xl font-semibold">Montage vidéo</h3>
+        </div>
+        <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+          <span class="text-3xl">📢</span>
+          <h3 class="mt-4 text-xl font-semibold">Conseil & Stratégie</h3>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="bg-gradient-to-r from-blue-600 to-purple-600 py-16 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold">Prêt à booster vos contenus avec un son pro ?</h2>
+        <a href="/contact" class="mt-6 inline-block px-8 py-3 rounded-xl bg-white text-gray-900 font-semibold hover:bg-gray-200">
+          Contactez-moi
         </a>
       </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
+      <p>© {year} ATK Music — Tous droits réservés</p>
+      <div class="mt-2 space-x-4">
+        <a href="/mentions-legales" class="hover:text-white">Mentions légales</a>
+        <a href="/confidentialite" class="hover:text-white">Confidentialité</a>
+      </div>
+    </footer>
   </body>
 </html>

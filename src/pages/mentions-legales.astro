@@ -1,0 +1,57 @@
+---
+import "../styles/global.css";
+const year = new Date().getFullYear();
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mentions légales — ATK Music</title>
+  </head>
+  <body class="bg-gray-950 text-white">
+    <!-- Navbar -->
+    <nav class="w-full bg-gray-950/80 backdrop-blur border-b border-white/10 fixed top-0 z-50">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/" class="flex items-center space-x-3">
+          <div class="flex items-center justify-center w-12 h-12 bg-white rounded-full overflow-hidden">
+            <img src="/images/LOGOVF.png" alt="ATK Music Logo" class="h-10 w-auto object-contain" />
+          </div>
+          <span class="font-bold text-lg">ATK Music</span>
+        </a>
+        <ul class="hidden md:flex space-x-8 font-medium">
+          <li><a href="/" class="hover:text-blue-400 transition">Accueil</a></li>
+          <li><a href="/services" class="hover:text-blue-400 transition">Services</a></li>
+          <li><a href="/about" class="hover:text-blue-400 transition">À propos</a></li>
+          <li><a href="/contact" class="hover:text-blue-400 transition">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="pt-28 max-w-4xl mx-auto px-6 py-16">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-8">Mentions légales</h1>
+
+      <h2 class="text-2xl font-bold mt-8 mb-2">Éditeur du site</h2>
+      <p class="text-gray-300">ATK Music — Entreprise individuelle</p>
+      <p class="text-gray-300">SIRET : 942 026 824</p>
+      <p class="text-gray-300">Responsable de publication : Lorenzo Cuadrado</p>
+      <p class="text-gray-300">Email : <a href="mailto:contact@atkmusic.fr" class="text-blue-400">contact@atkmusic.fr</a></p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-2">Hébergement</h2>
+      <p class="text-gray-300">Ce site est hébergé par <strong>Cloudflare, Inc.</strong></p>
+      <p class="text-gray-300">Siège social : 101 Townsend St, San Francisco, CA 94107, États-Unis</p>
+      <p class="text-gray-300">Site web : <a href="https://www.cloudflare.com/" target="_blank" class="text-blue-400">www.cloudflare.com</a></p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-2">Propriété intellectuelle</h2>
+      <p class="text-gray-300">
+        L’ensemble du contenu présent sur le site atkmusic.fr (textes, images, sons, vidéos, graphismes) 
+        est protégé par le droit d’auteur. Toute reproduction, représentation, diffusion ou exploitation 
+        sans autorisation est interdite.
+      </p>
+    </main>
+
+    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
+      <p>© {year} ATK Music — Tous droits réservés</p>
+    </footer>
+  </body>
+</html>
