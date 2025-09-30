@@ -1,7 +1,5 @@
 ---
 import "../styles/global.css";
-
-// Pour afficher l'année automatiquement
 const year = new Date().getFullYear();
 ---
 
@@ -16,16 +14,12 @@ const year = new Date().getFullYear();
     <nav class="w-full bg-gray-950/80 backdrop-blur border-b border-white/10 fixed top-0 z-50">
       <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <!-- Logo -->
-       <a href="/" class="flex items-center space-x-3">
-  <div class="flex items-center justify-center w-12 h-12 bg-white rounded-full overflow-hidden">
-    <img src="/images/LOGOVF.png" 
-         alt="ATK Music Logo" 
-         class="h-12 w-auto scale-120" />
-  </div>
-  <span class="font-bold text-lg">ATK Music</span>
-</a>
-
-
+        <a href="/" class="flex items-center space-x-2">
+          <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center overflow-hidden">
+            <img src="/images/LOGOVF.png" alt="ATK Music logo" class="h-16 scale-125 object-contain" />
+          </div>
+          <span class="font-bold text-lg">ATK Music</span>
+        </a>
 
         <!-- Menu -->
         <ul class="hidden md:flex space-x-8 font-medium">
@@ -41,22 +35,47 @@ const year = new Date().getFullYear();
       <!-- Hero Section -->
       <section class="max-w-6xl mx-auto px-6 py-20 text-center">
         <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
-          Le son qui capte l’attention
+          Donnez de la voix à vos idées 
         </h1>
-        <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
-          Mixage, sound design et montage audio/vidéo pour vos projets professionnels.
+        <p class="mt-6 text-lg text-gray-300 max-w-3xl mx-auto">
+          ATK Music accompagne <span class="text-blue-400 font-semibold">les entreprises</span> 
+          dans la création de contenus audio/vidéo impactants, et 
+          <span class="text-purple-400 font-semibold">les artistes émergents</span> 
+          dans leur développement artistique et créatif.
         </p>
-        <div class="mt-8 flex justify-center space-x-4">
+        <div class="mt-10 flex justify-center gap-6">
           <a href="/services" class="px-6 py-3 rounded-xl bg-blue-500 hover:bg-blue-600 font-medium">
-            Découvrir mes services
+            Pour les entreprises
           </a>
-          <a href="/contact" class="px-6 py-3 rounded-xl ring-1 ring-white/30 hover:bg-white/10 font-medium">
-            Me contacter
+          <a href="#coaching" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-700 font-medium">
+            Pour les artistes
           </a>
         </div>
       </section>
 
-      <!-- Aperçu Services -->
+      <!-- Double cible -->
+      <section class="max-w-6xl mx-auto px-6 py-16 grid gap-8 md:grid-cols-2">
+        <div class="p-8 rounded-xl bg-white/5 border border-white/10 text-center">
+          <h3 class="text-2xl font-bold mb-3 text-blue-400">👔 Entreprises</h3>
+          <p class="text-gray-300">
+            Mixage, sound design, montage et stratégie pour capter l’attention de vos clients.
+          </p>
+          <a href="/services" class="mt-6 inline-block px-5 py-3 rounded-lg bg-blue-500 hover:bg-blue-600 font-semibold">
+            Découvrir les services
+          </a>
+        </div>
+        <div class="p-8 rounded-xl bg-white/5 border border-white/10 text-center">
+          <h3 class="text-2xl font-bold mb-3 text-purple-400">🎤 Artistes</h3>
+          <p class="text-gray-300">
+            Coaching, identité artistique et accompagnement créatif pour faire évoluer ton projet.
+          </p>
+          <a href="#coaching" class="mt-6 inline-block px-5 py-3 rounded-lg bg-purple-600 hover:bg-purple-700 font-semibold">
+            Découvrir le coaching
+          </a>
+        </div>
+      </section>
+
+      <!-- Services Entreprises -->
       <section class="max-w-6xl mx-auto px-6 py-16 grid gap-8 md:grid-cols-4 text-center">
         <div class="p-6 rounded-xl bg-white/5 border border-white/10">
           <span class="text-3xl">🎙️</span>
@@ -76,9 +95,37 @@ const year = new Date().getFullYear();
         </div>
       </section>
 
+      <!-- Coaching d’artiste -->
+      <section id="coaching" class="max-w-6xl mx-auto px-6 py-20 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">🎤 Coaching d’artiste</h2>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-12">
+          Développe ton identité artistique, ton contenu et ta créativité grâce à un accompagnement personnalisé.
+        </p>
+        <div class="grid gap-8 md:grid-cols-2">
+          <!-- Offre découverte -->
+          <div class="p-8 rounded-xl bg-white/5 border border-white/10 text-center">
+            <h3 class="text-2xl font-semibold">Séance Découverte</h3>
+            <p class="mt-3 text-gray-300">1h de coaching personnalisé pour lancer ton projet artistique.</p>
+            <p class="mt-4 text-3xl font-bold text-blue-400">29€</p>
+            <a href="/contact" class="mt-6 inline-block px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-xl font-semibold">
+              Réserver
+            </a>
+          </div>
+          <!-- Offre abonnement -->
+          <div class="p-8 rounded-xl bg-white/5 border border-white/10 text-center">
+            <h3 class="text-2xl font-semibold">Pack Abonnement</h3>
+            <p class="mt-3 text-gray-300">Suivi mensuel et accompagnement créatif pour artistes motivés.</p>
+            <p class="mt-4 text-3xl font-bold text-purple-400">97€/mois</p>
+            <a href="/contact" class="mt-6 inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-xl font-semibold">
+              S’abonner
+            </a>
+          </div>
+        </div>
+      </section>
+
       <!-- Call to Action -->
       <section class="bg-gradient-to-r from-blue-600 to-purple-600 py-16 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold">Prêt à booster vos contenus avec un son pro ?</h2>
+        <h2 class="text-3xl md:text-4xl font-bold">Prêt à donner vie à vos projets ?</h2>
         <a href="/contact" class="mt-6 inline-block px-8 py-3 rounded-xl bg-white text-gray-900 font-semibold hover:bg-gray-200">
           Contactez-moi
         </a>
