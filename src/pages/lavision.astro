@@ -1,0 +1,503 @@
+---
+import logo from "../assets/lavision/logo.png";
+import heroTitle from "../assets/lavision/hero-title.png";
+import heroBg from "../assets/lavision/hero-bg.png";
+import heroSteps from "../assets/lavision/hero-steps.png";
+import phonesBeforeAfter from "../assets/lavision/phones-before-after.png";
+import sectionPhonesBg from "../assets/lavision/section-phones-bg.png";
+import sectionFormBg from "../assets/lavision/section-form-bg.png";
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Vision | Présence Instagram pensée pour les Tattoo Shops</title>
+    <meta
+      name="description"
+      content="Audit express offert après la convention pour les tattoo shops."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Barlow:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #050505;
+        --text: #f5f1eb;
+        --muted: rgba(245, 241, 235, 0.82);
+        --line: rgba(255, 255, 255, 0.18);
+        --card-border: rgba(255, 255, 255, 0.12);
+        --input-bg: rgba(255, 255, 255, 0.94);
+        --input-text: #171717;
+        --button-bg: #0c0c0c;
+        --button-text: #ffffff;
+        --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        --max: 1200px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'Barlow', sans-serif;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .page {
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      .hero,
+      .phones-section,
+      .audit-section {
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      /* ── HERO ── */
+      .hero {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        background-position: center top;
+        padding-top: 12px;
+        padding-bottom: 0;
+        max-height: 54vw;
+        overflow: hidden;
+      }
+
+      .hero__inner {
+        width: min(1280px, calc(100% - 32px));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0;
+        padding: 0;
+      }
+
+      .hero__title {
+        width: min(980px, 100%);
+        filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.28));
+        margin: 8px 0 0;
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero__steps {
+        width: min(920px, 100%);
+        filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.22));
+        margin: -160px 0 -30px;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* ── PHONES ── */
+      .phones-section {
+        position: relative;
+        padding: 16px 0 20px;
+        background-position: center top;
+      }
+
+      .phones-wrap {
+        width: min(1150px, calc(100% - 28px));
+        margin: 0 auto;
+      }
+
+      .phones-image {
+        width: 100%;
+        max-width: 980px;
+        margin: 0 auto;
+        filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.34));
+      }
+
+      /* ── AUDIT / FORM ── */
+      .audit-section {
+        position: relative;
+        padding: 32px 0 60px;
+        background-position: center;
+      }
+
+      .audit-head {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        width: min(1100px, calc(100% - 28px));
+        margin: 0 auto 12px;
+      }
+
+      .audit-head::before,
+      .audit-head::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--line);
+      }
+
+      .audit-title {
+        margin: 0;
+        text-align: center;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: clamp(1.6rem, 3vw, 3rem);
+        line-height: 1.1;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        text-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+      }
+
+      .audit-subtitle {
+        width: min(980px, calc(100% - 28px));
+        margin: 0 auto;
+        text-align: center;
+        font-size: clamp(1rem, 1.5vw, 1.4rem);
+        line-height: 1.45;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .contact-title {
+        margin: 16px auto 0;
+        text-align: center;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: clamp(1.3rem, 2vw, 2rem);
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      .form-shell {
+        width: min(840px, calc(100% - 28px));
+        margin: 22px auto 0;
+        padding: 28px;
+        border: 1px solid var(--card-border);
+        background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(2px);
+      }
+
+      .form {
+        display: grid;
+        gap: 16px;
+      }
+
+      .field {
+        display: grid;
+        gap: 8px;
+      }
+
+      .label {
+        font-family: 'Barlow', sans-serif;
+        font-size: 0.78rem;
+        line-height: 1.2;
+        color: rgba(255, 255, 255, 0.94);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .input {
+        width: 100%;
+        border: 0;
+        outline: none;
+        background: var(--input-bg);
+        color: var(--input-text);
+        padding: 16px 18px;
+        font-family: 'Barlow', sans-serif;
+        font-size: 1rem;
+        border-radius: 0;
+      }
+
+      .input::placeholder {
+        color: rgba(23, 23, 23, 0.42);
+      }
+
+      .actions {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 4px;
+      }
+
+      .button {
+        appearance: none;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        background: var(--button-bg);
+        color: var(--button-text);
+        padding: 12px 28px;
+        font-family: 'Barlow', sans-serif;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 0.2s, border-color 0.2s;
+      }
+
+      .button:hover {
+        background: #1e1e1e;
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .brand {
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .brand__logo {
+        height: 100px;
+        width: auto;
+        opacity: 0.88;
+      }
+
+      .brand__contact {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-family: 'Barlow', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        color: rgba(255,255,255,0.55);
+      }
+
+      .brand__contact a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .brand__sep {
+        width: 1px;
+        height: 10px;
+        background: rgba(255,255,255,0.25);
+      }
+
+      /* ── TABLET ── */
+      @media (max-width: 900px) {
+        .hero {
+          padding-top: 8px;
+          max-height: 72vw;
+        }
+
+        .hero__title {
+          margin-top: 4px;
+        }
+
+        .hero__steps {
+          margin: -100px 0 -14px;
+        }
+
+        .phones-section {
+          padding: 10px 0 10px;
+        }
+
+        .audit-section {
+          padding: 22px 0 44px;
+        }
+
+        .audit-head {
+          gap: 10px;
+        }
+
+        .audit-title {
+          white-space: normal;
+        }
+
+        .form-shell {
+          padding: 18px;
+        }
+      }
+
+      /* ── MOBILE ── */
+      @media (max-width: 640px) {
+        .hero {
+          padding-top: 4px;
+          max-height: 96vw;
+        }
+
+        .hero__inner,
+        .phones-wrap,
+        .audit-head,
+        .audit-subtitle,
+        .form-shell {
+          width: calc(100% - 20px);
+        }
+
+        .hero__title {
+          width: 100%;
+          margin-top: 2px;
+        }
+
+        .hero__steps {
+          width: 100%;
+          margin: -60px 0 -6px;
+        }
+
+        .phones-image {
+          width: 100%;
+        }
+
+        .phones-section {
+          padding: 6px 0 6px;
+        }
+
+        .audit-section {
+          padding: 18px 0 36px;
+        }
+
+        .audit-title {
+          font-size: clamp(1.3rem, 7.5vw, 1.9rem);
+        }
+
+        .audit-subtitle {
+          font-size: 0.95rem;
+          line-height: 1.4;
+        }
+
+        .contact-title {
+          font-size: 1.15rem;
+        }
+
+        .input {
+          padding: 14px 12px;
+          font-size: 0.95rem;
+        }
+
+        .actions {
+          justify-content: center;
+        }
+
+        .button {
+          width: 100%;
+          max-width: 220px;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="page">
+      <section
+        class="hero"
+        style={`background-image:
+          linear-gradient(to bottom, rgba(0,0,0,0.38), rgba(0,0,0,0.48)),
+          url('${heroBg.src}')`}
+      >
+        <div class="hero__inner">
+          <img
+            class="hero__title"
+            src={heroTitle.src}
+            alt="Présence Instagram pensée pour les Tattoo Shops"
+          />
+          <img
+            class="hero__steps"
+            src={heroSteps.src}
+            alt="Réflexion stratégique, tournage, création des contenus, programmation des posts"
+          />
+        </div>
+      </section>
+
+      <section
+        class="phones-section"
+        aria-label="Avant après Instagram"
+        style={`background-image:
+          linear-gradient(to bottom, rgba(0,0,0,0.18), rgba(0,0,0,0.22)),
+          url('${sectionPhonesBg.src}')`}
+      >
+        <div class="phones-wrap">
+          <img
+            class="phones-image"
+            src={phonesBeforeAfter.src}
+            alt="Comparaison avant après d'un feed Instagram de tattoo shop"
+          />
+        </div>
+      </section>
+
+      <section
+        class="audit-section"
+        style={`background-image:
+          linear-gradient(to bottom, rgba(0,0,0,0.28), rgba(0,0,0,0.38)),
+          url('${sectionFormBg.src}')`}
+      >
+        <div class="audit-head">
+          <h2 class="audit-title">Audit express offert après la convention</h2>
+        </div>
+
+        <p class="audit-subtitle">
+          On regarde votre Instagram pour vous donner des conseils clairs en 5 minutes
+        </p>
+
+        <h3 class="contact-title">Laissez-nous votre contact</h3>
+
+        <div class="form-shell">
+          <form class="form" method="POST" action="#">
+            <div class="field">
+              <label class="label" for="instagram">Identifiant Instagram</label>
+              <input
+                class="input"
+                id="instagram"
+                name="instagram"
+                type="text"
+                placeholder="@votrecompte"
+              />
+            </div>
+
+            <div class="field">
+              <label class="label" for="contact">Numéro / Mail</label>
+              <input
+                class="input"
+                id="contact"
+                name="contact"
+                type="text"
+                placeholder="Votre numéro ou votre email"
+              />
+            </div>
+
+            <div class="actions">
+              <button class="button" type="submit">Envoyer</button>
+            </div>
+          </form>
+
+          <div class="brand">
+            <img class="brand__logo" src={logo.src} alt="La Vision by ATK" />
+            <div class="brand__contact">
+              <a href="https://instagram.com/lavision.atk" target="_blank" rel="noopener">@lavision.atk</a>
+              <span class="brand__sep"></span>
+              <a href="tel:+33750636318">07 50 63 63 18</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
