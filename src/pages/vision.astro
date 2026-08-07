@@ -99,8 +99,8 @@
         padding: clamp(42px, 7vw, 96px) var(--pad) var(--pad);
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        gap: 42px;
+        justify-content: flex-start;
+        gap: clamp(28px, 4vw, 58px);
       }
 
       .kicker {
@@ -443,7 +443,7 @@
         border: 1px solid var(--line);
       }
 
-      .contact-card h2 { font-size: clamp(2.6rem, 5.6vw, 6rem); }
+      .contact-card h2 { font-size: clamp(2.2rem, 4.2vw, 4.8rem); line-height: 0.9; letter-spacing: -0.065em; }
       .contact-links { display: grid; gap: 12px; margin-top: 34px; }
       .contact-links a {
         display: flex;
@@ -489,9 +489,9 @@
       .input:focus { border-color: rgba(255,255,255,0.46); }
       .form .btn { width: fit-content; margin-top: 8px; cursor: pointer; }
 
-      .footer {
+       .footer {
         display: grid;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 1fr;
         gap: 18px;
         padding: 24px var(--pad);
         color: var(--muted);
@@ -578,7 +578,7 @@
         <div class="hero__copy">
           <div>
             <span class="kicker">La Vision / studio créatif</span>
-            <h1><span>Vidéo</span><span>Montage</span></h1>
+            <h1><span>Des vidéos</span><span>qui donnent</span><span>envie</span></h1>
           </div>
           <div class="hero__bottom">
             <p class="lead">
@@ -758,7 +758,7 @@
         <div class="contact-grid">
           <div class="contact-card">
             <span class="label">04 / Contact</span>
-            <h2>Créons quelque chose qui sonne juste.</h2>
+            <h2>Parlons de ton projet.</h2>
             <p class="body-text" style="margin-top: 24px;">
               Envoie le contexte, la matière disponible et le résultat recherché.
               Je te réponds franchement sur ce qu'on peut construire.
@@ -775,7 +775,7 @@
             </div>
             <div class="field">
               <label for="email">Contact</label>
-              <input class="input" id="email" name="email" type="text" placeholder="Mail / Instagram / téléphone" />
+              <input class="input" id="email" name="email" type="text" placeholder="E-mail / Instagram / téléphone" />
             </div>
             <div class="field">
               <label for="project">Projet</label>
@@ -788,7 +788,7 @@
 
       <footer class="footer">
         <span>La Vision — ATK Music</span>
-        <span>Page indépendante / non reliée au site principal</span>
+        
       </footer>
     </main>
     <script>
