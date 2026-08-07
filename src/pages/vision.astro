@@ -1,0 +1,414 @@
+---
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Vision | ATK Music — Vidéo, montage & direction créative</title>
+    <meta
+      name="description"
+      content="Une page à part pour comprendre l'approche ATK Music : montage vidéo, contenus courts, narration visuelle et direction créative humaine."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #05070b;
+        --panel: #0b0f17;
+        --panel-soft: rgba(255, 255, 255, 0.045);
+        --text: #f5f7fb;
+        --muted: rgba(245, 247, 251, 0.68);
+        --line: rgba(255, 255, 255, 0.12);
+        --accent: #7dd3fc;
+        --accent-2: #c084fc;
+        --max: 1120px;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at 18% 4%, rgba(125, 211, 252, 0.16), transparent 30vw),
+          radial-gradient(circle at 82% 8%, rgba(192, 132, 252, 0.13), transparent 28vw),
+          linear-gradient(180deg, #05070b 0%, #070913 52%, #030407 100%);
+        color: var(--text);
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      a { color: inherit; }
+
+      .page { min-height: 100vh; overflow: hidden; }
+
+      .section {
+        width: min(var(--max), calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        min-height: 100vh;
+        display: grid;
+        align-items: center;
+        padding: 72px 0 56px;
+        position: relative;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto -10vw 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.24), transparent);
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 34px;
+        height: 1px;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      }
+
+      h1, h2, h3, p { margin: 0; }
+
+      h1 {
+        max-width: 980px;
+        margin-top: 24px;
+        font-family: "Instrument Serif", Georgia, serif;
+        font-size: clamp(4rem, 11vw, 9.6rem);
+        line-height: 0.86;
+        letter-spacing: -0.06em;
+        font-weight: 400;
+      }
+
+      .hero__lead {
+        max-width: 720px;
+        margin-top: 34px;
+        color: rgba(245, 247, 251, 0.82);
+        font-size: clamp(1.08rem, 2vw, 1.42rem);
+        line-height: 1.55;
+      }
+
+      .hero__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 36px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 20px;
+        border: 1px solid rgba(255,255,255,0.16);
+        border-radius: 999px;
+        text-decoration: none;
+        font-size: 0.92rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        transition: transform .18s ease, border-color .18s ease, background .18s ease;
+      }
+
+      .button:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.34); }
+      .button--primary { background: var(--text); color: #05070b; }
+      .button--ghost { background: rgba(255,255,255,0.045); color: var(--text); }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 18px;
+      }
+
+      .block {
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025));
+        border-radius: 28px;
+        padding: clamp(22px, 4vw, 38px);
+        box-shadow: 0 24px 70px rgba(0,0,0,0.26);
+      }
+
+      .vision { padding: 84px 0; }
+      .vision .block:first-child { grid-column: span 7; }
+      .vision .block:last-child { grid-column: span 5; }
+
+      h2 {
+        font-family: "Instrument Serif", Georgia, serif;
+        font-size: clamp(2.4rem, 5vw, 5rem);
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+        font-weight: 400;
+      }
+
+      .text {
+        margin-top: 20px;
+        color: var(--muted);
+        font-size: 1.03rem;
+        line-height: 1.72;
+      }
+
+      .big-quote {
+        font-family: "Instrument Serif", Georgia, serif;
+        font-size: clamp(2rem, 4vw, 4.4rem);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+      }
+
+      .services { padding: 26px 0 84px; }
+      .services__head { margin-bottom: 24px; }
+      .service { grid-column: span 4; min-height: 230px; }
+
+      .num {
+        color: var(--accent);
+        font-size: 0.78rem;
+        font-weight: 900;
+        letter-spacing: 0.15em;
+      }
+
+      h3 {
+        margin-top: 42px;
+        font-size: clamp(1.35rem, 2vw, 1.8rem);
+        line-height: 1.08;
+        letter-spacing: -0.04em;
+      }
+
+      .method { padding: 24px 0 90px; }
+      .method .block { grid-column: span 3; }
+      .method h3 { margin-top: 22px; }
+
+      .portfolio { padding: 24px 0 88px; }
+      .portfolio-card {
+        grid-column: span 6;
+        min-height: 330px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .portfolio-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(135deg, rgba(125,211,252,0.16), transparent 42%),
+          radial-gradient(circle at 78% 24%, rgba(192,132,252,0.18), transparent 26%);
+        opacity: .8;
+        pointer-events: none;
+      }
+
+      .portfolio-card > * { position: relative; }
+
+      .tagline {
+        color: rgba(245,247,251,.58);
+        font-size: .84rem;
+        font-weight: 800;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+      }
+
+      .contact {
+        padding: 42px 0 96px;
+      }
+
+      .contact__box {
+        min-height: 420px;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        border-radius: 36px;
+        border: 1px solid rgba(255,255,255,.14);
+        background:
+          radial-gradient(circle at 50% 0%, rgba(125,211,252,.16), transparent 42%),
+          linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
+        padding: clamp(28px, 6vw, 70px);
+      }
+
+      .contact p {
+        max-width: 620px;
+        margin: 22px auto 0;
+        color: var(--muted);
+        line-height: 1.65;
+        font-size: 1.08rem;
+      }
+
+      .contact__links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      footer {
+        width: min(var(--max), calc(100% - 40px));
+        margin: 0 auto;
+        padding: 24px 0 40px;
+        color: rgba(245,247,251,.42);
+        font-size: .86rem;
+        border-top: 1px solid var(--line);
+      }
+
+      @media (max-width: 880px) {
+        .vision .block:first-child,
+        .vision .block:last-child,
+        .service,
+        .method .block,
+        .portfolio-card { grid-column: 1 / -1; }
+        .hero { min-height: auto; padding-top: 96px; }
+        .section { width: min(var(--max), calc(100% - 24px)); }
+        .block { border-radius: 22px; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="page">
+      <section class="hero section">
+        <div>
+          <span class="eyebrow">ATK Music — La Vision</span>
+          <h1>Faire sentir une idée avant de l'expliquer.</h1>
+          <p class="hero__lead">
+            J'aide les artistes, marques et projets indépendants à transformer une matière brute
+            en contenu clair, vivant et mémorable : vidéo, montage, formats courts, narration et direction créative.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="mailto:contact@atkmusic.fr?subject=Projet%20vid%C3%A9o%20%2F%20montage">Parler d'un projet</a>
+            <a class="button button--ghost" href="#portfolio">Voir l'approche</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="vision section" aria-label="La vision">
+        <div class="grid">
+          <article class="block">
+            <h2>Une vidéo ne vend pas parce qu'elle est belle. Elle vend quand elle fait comprendre.</h2>
+            <p class="text">
+              Mon travail se situe entre le montage, le regard et la stratégie. Je cherche le bon rythme,
+              les images qui portent vraiment l'idée, les silences utiles, les coupes qui gardent l'attention
+              et la forme qui rend le message évident.
+            </p>
+          </article>
+          <aside class="block">
+            <p class="big-quote">Du fond, du rythme, une présence.</p>
+            <p class="text">
+              Pas du contenu pour remplir un feed. Des pièces qui donnent envie de s'arrêter,
+              d'écouter, de comprendre et de passer à l'action.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="services section" aria-label="Services vidéo">
+        <div class="services__head">
+          <span class="eyebrow">Ce que je peux construire</span>
+        </div>
+        <div class="grid">
+          <article class="block service">
+            <span class="num">01</span>
+            <h3>Montage vidéo</h3>
+            <p class="text">Assembler, rythmer, clarifier. Donner une vraie intention à ta matière brute.</p>
+          </article>
+          <article class="block service">
+            <span class="num">02</span>
+            <h3>Formats courts</h3>
+            <p class="text">Reels, TikTok, Shorts : accroche, structure, sous-titres, dynamique et rétention.</p>
+          </article>
+          <article class="block service">
+            <span class="num">03</span>
+            <h3>Direction créative</h3>
+            <p class="text">Trouver l'angle, l'ambiance, la narration et le système visuel autour du projet.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="method section" aria-label="Méthode">
+        <div class="grid">
+          <article class="block">
+            <span class="num">A</span>
+            <h3>Comprendre</h3>
+            <p class="text">Ton projet, ton public, ce qu'on doit ressentir et retenir.</p>
+          </article>
+          <article class="block">
+            <span class="num">B</span>
+            <h3>Structurer</h3>
+            <p class="text">Transformer les idées en séquence claire : début, tension, preuve, sortie.</p>
+          </article>
+          <article class="block">
+            <span class="num">C</span>
+            <h3>Monter</h3>
+            <p class="text">Rythme, image, son, texte, respiration. Tout sert l'intention.</p>
+          </article>
+          <article class="block">
+            <span class="num">D</span>
+            <h3>Livrer</h3>
+            <p class="text">Versions propres, prêtes à publier, adaptées aux plateformes.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="portfolio" class="portfolio section" aria-label="Portfolio">
+        <div class="services__head">
+          <span class="eyebrow">Portfolio / exemples</span>
+        </div>
+        <div class="grid">
+          <article class="block portfolio-card">
+            <div>
+              <span class="tagline">Artistes & identité</span>
+              <h2>Créer une présence visuelle autour d'un univers.</h2>
+            </div>
+            <p class="text">Clips courts, fragments de studio, annonces, contenus d'ambiance, vidéos qui installent une esthétique.</p>
+          </article>
+          <article class="block portfolio-card">
+            <div>
+              <span class="tagline">Marques & projets</span>
+              <h2>Rendre une offre lisible sans la rendre froide.</h2>
+            </div>
+            <p class="text">Contenus explicatifs, réseaux sociaux, mini-campagnes, storytelling simple et humain.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact section" aria-label="Contact">
+        <div class="contact__box">
+          <div>
+            <span class="eyebrow">Travailler ensemble</span>
+            <h2>Tu as une matière brute, une idée, un projet à rendre plus fort ?</h2>
+            <p>
+              Envoie-moi ce que tu veux construire : le contexte, les images que tu as déjà,
+              la plateforme visée et le résultat attendu. Je te dirai franchement ce qu'on peut en faire.
+            </p>
+            <div class="contact__links">
+              <a class="button button--primary" href="mailto:contact@atkmusic.fr?subject=Projet%20vid%C3%A9o%20%2F%20montage">contact@atkmusic.fr</a>
+              <a class="button button--ghost" href="https://instagram.com/lavision.atk" target="_blank" rel="noopener">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      © 2026 ATK Music — page indépendante, non reliée au reste du site.
+    </footer>
+  </body>
+</html>
