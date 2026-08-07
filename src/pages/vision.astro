@@ -186,6 +186,41 @@
         background: #111;
       }
 
+      .media-link {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: inherit;
+        color: inherit;
+        cursor: pointer;
+      }
+
+      .media-link::after {
+        content: "Voir le post ↗";
+        position: absolute;
+        left: 14px;
+        bottom: 14px;
+        z-index: 3;
+        padding: 8px 10px;
+        border: 1px solid rgba(255,255,255,0.24);
+        background: rgba(0,0,0,0.52);
+        backdrop-filter: blur(6px);
+        color: rgba(255,255,255,0.82);
+        font-size: 0.62rem;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        opacity: 0;
+        transform: translateY(6px);
+        transition: opacity 0.18s ease, transform 0.18s ease;
+      }
+
+      .media-link:hover::after,
+      .media-link:focus-visible::after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
       .media-video,
       .media-image {
         width: 100%;
@@ -535,18 +570,20 @@
         </div>
         <div class="hero__media">
           <div class="poster" aria-label="Vidéo principale Kobalt">
-            <video
-              class="media-video"
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              poster="/media/vision/posters/hero-kobalt.jpg"
-              data-lazy-video
-            >
-              <source src="/media/vision/videos/hero-kobalt.mp4" type="video/mp4" />
-            </video>
+            <a class="media-link" href="https://www.instagram.com/reel/DUnRTR0CDAz/?igsh=M3J5YXF1Y2QzNGVm" target="_blank" rel="noopener" aria-label="Voir le reel Kobalt Tattoo">
+              <video
+                class="media-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="/media/vision/posters/hero-kobalt.jpg"
+                data-lazy-video
+              >
+                <source src="/media/vision/videos/hero-kobalt.mp4" type="video/mp4" />
+              </video>
+            </a>
           </div>
           <div class="hero__caption">
             <span>Kobalt — vidéo / direction visuelle</span>
@@ -587,41 +624,51 @@
         <div class="works-row" aria-label="Galerie de projets">
           <article class="work-card">
             <div class="work-media">
-              <video class="media-video" autoplay muted loop playsinline preload="metadata" poster="/media/vision/posters/project-sushi-pearl.jpg" data-lazy-video>
-                <source src="/media/vision/videos/project-sushi-pearl.mp4" type="video/mp4" />
-              </video>
+              <a class="media-link" href="https://www.instagram.com/reel/DTxPnsLjxxt/?igsh=bHRlMm9leXhiMWcz" target="_blank" rel="noopener" aria-label="Voir le reel Sushi Pearl">
+                <video class="media-video" autoplay muted loop playsinline preload="metadata" poster="/media/vision/posters/project-sushi-pearl.jpg" data-lazy-video>
+                  <source src="/media/vision/videos/project-sushi-pearl.mp4" type="video/mp4" />
+                </video>
+              </a>
             </div>
             <div class="work-title"><span>01</span><span>Sushi Pearl / lieu & ambiance</span></div>
           </article>
           <article class="work-card">
             <div class="work-media">
-              <video class="media-video" autoplay muted loop playsinline preload="metadata" poster="/media/vision/posters/project-graffiti.jpg" data-lazy-video>
-                <source src="/media/vision/videos/project-graffiti.mp4" type="video/mp4" />
-              </video>
+              <a class="media-link" href="https://www.instagram.com/reel/DRg46KGDMKS/?igsh=MW11dGxwMXQ0cjdxNg==" target="_blank" rel="noopener" aria-label="Voir le reel Graffiti">
+                <video class="media-video" autoplay muted loop playsinline preload="metadata" poster="/media/vision/posters/project-graffiti.jpg" data-lazy-video>
+                  <source src="/media/vision/videos/project-graffiti.mp4" type="video/mp4" />
+                </video>
+              </a>
             </div>
             <div class="work-title"><span>02</span><span>Graffiti / shop & artiste</span></div>
           </article>
           <article class="work-card">
             <div class="work-media">
-              <video class="media-video" autoplay muted loop playsinline preload="metadata" poster="/media/vision/posters/project-music-text.jpg" data-lazy-video>
-                <source src="/media/vision/videos/project-music-text.mp4" type="video/mp4" />
-              </video>
+              <a class="media-link" href="https://vm.tiktok.com/ZGdxkVc3R/" target="_blank" rel="noopener" aria-label="Voir le TikTok musique idée texte">
+                <video class="media-video" autoplay muted loop playsinline preload="metadata" poster="/media/vision/posters/project-music-text.jpg" data-lazy-video>
+                  <source src="/media/vision/videos/project-music-text.mp4" type="video/mp4" />
+                </video>
+              </a>
             </div>
             <div class="work-title"><span>03</span><span>Musique / idée & texte</span></div>
           </article>
           <article class="work-card">
             <div class="work-media">
-              <video class="media-video" autoplay muted loop playsinline preload="metadata" poster="/media/vision/posters/project-tattoo-recruit.jpg" data-lazy-video>
-                <source src="/media/vision/videos/project-tattoo-recruit.mp4" type="video/mp4" />
-              </video>
+              <a class="media-link" href="https://www.instagram.com/reel/DXPECgYtlQ4/?igsh=czQ5enl1djk4bnY3" target="_blank" rel="noopener" aria-label="Voir le reel Tattoo shop recrutement">
+                <video class="media-video" autoplay muted loop playsinline preload="metadata" poster="/media/vision/posters/project-tattoo-recruit.jpg" data-lazy-video>
+                  <source src="/media/vision/videos/project-tattoo-recruit.mp4" type="video/mp4" />
+                </video>
+              </a>
             </div>
             <div class="work-title"><span>04</span><span>Tattoo shop / recrutement</span></div>
           </article>
           <article class="work-card">
             <div class="work-media">
-              <video class="media-video" autoplay muted loop playsinline preload="metadata" poster="/media/vision/posters/project-defi.jpg" data-lazy-video>
-                <source src="/media/vision/videos/project-defi.mp4" type="video/mp4" />
-              </video>
+              <a class="media-link" href="https://www.instagram.com/reel/DYNBgWqMoh2/?igsh=Ym8yeDk0cGxmcWtr" target="_blank" rel="noopener" aria-label="Voir le reel Défi short">
+                <video class="media-video" autoplay muted loop playsinline preload="metadata" poster="/media/vision/posters/project-defi.jpg" data-lazy-video>
+                  <source src="/media/vision/videos/project-defi.mp4" type="video/mp4" />
+                </video>
+              </a>
             </div>
             <div class="work-title"><span>05</span><span>Défi / short social</span></div>
           </article>
