@@ -423,6 +423,81 @@
         text-transform: none;
       }
 
+      .results-intro {
+        max-width: 760px;
+      }
+
+      .result-cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .result-card {
+        display: grid;
+        gap: 26px;
+        padding: clamp(24px, 3.5vw, 42px);
+        border: 1px solid var(--line);
+        background:
+          linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.015)),
+          #101010;
+      }
+
+      .result-card__head {
+        display: grid;
+        gap: 8px;
+      }
+
+      .result-card h3 {
+        margin: 0;
+        font-family: "Archivo Black", Inter, sans-serif;
+        font-size: clamp(1.75rem, 3.2vw, 3.45rem);
+        line-height: 0.9;
+        letter-spacing: -0.07em;
+      }
+
+      .result-card__meta,
+      .result-source {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.72rem;
+        line-height: 1.35;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+      }
+
+      .result-stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 14px;
+      }
+
+      .stat {
+        display: grid;
+        gap: 4px;
+        min-width: 0;
+      }
+
+      .stat strong {
+        font-family: "Archivo Black", Inter, sans-serif;
+        color: var(--ink);
+        font-size: clamp(2rem, 4.5vw, 4.8rem);
+        line-height: 0.82;
+        letter-spacing: -0.08em;
+      }
+
+      .stat span {
+        color: #d8d8d8;
+        font-size: 0.74rem;
+        line-height: 1.25;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+      }
+
+      .result-card .body-text {
+        max-width: 620px;
+      }
+
       .services-grid {
         display: grid;
         grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.1fr);
@@ -579,6 +654,7 @@
 
         .section__head,
         .about-grid,
+        .result-cards,
         .services-grid,
         .contact-grid {
           grid-template-columns: 1fr;
@@ -686,7 +762,7 @@
               Je m’appelle Lorenzo Cuadrado, je suis vidéaste et monteur dans le Var.<br /><br />
               Mon travail commence avant le montage : comprendre ce qu’on veut faire ressentir.
               Je cherche le rythme, le détail et la bonne manière de raconter pour rendre une vidéo plus claire,
-              plus humaine et plus mémorable.
+              plus humaine et plus mémorable, en pensant aussi à la manière dont elle sera regardée et consommée.
             </p>
             <p class="manifest">UNE VRAIE PRÉSENCE POUR TON PROJET.</p>
             <p class="body-text">
@@ -764,9 +840,55 @@
         </div>
       </section>
 
+      <section class="section" aria-label="Résultats et accompagnement contenu">
+        <div class="section__head">
+          <span class="label">03 / Résultats</span>
+          <div>
+            <h2>Créer, mais aussi faire vivre le contenu.</h2>
+            <p class="body-text results-intro" style="margin-top: 24px;">
+              Je peux aussi accompagner la publication dans la durée : réflexion sur les formats, création des contenus, rédaction des descriptions et programmation des posts, avec une approche qui évolue selon les résultats.
+            </p>
+          </div>
+        </div>
+        <div class="result-cards">
+          <article class="result-card">
+            <div class="result-card__head">
+              <h3>Atelier Tekniika</h3>
+              <p class="result-card__meta">Instagram · Accompagnement mensuel</p>
+            </div>
+            <div class="result-stats" aria-label="Statistiques Atelier Tekniika">
+              <div class="stat"><strong>+1,1 M</strong><span>de vues</span></div>
+              <div class="stat"><strong>×49</strong><span>de portée</span></div>
+              <div class="stat"><strong>+6 500</strong><span>visites du profil</span></div>
+              <div class="stat"><strong>+608</strong><span>nouveaux abonnés</span></div>
+            </div>
+            <p class="body-text">
+              Création et gestion régulière des contenus Instagram de l’atelier : réflexion sur les formats, tournage, montage, rédaction et programmation des publications.
+            </p>
+            <p class="result-source">Janvier → juillet 2026 · Comparaison de portée avec la même période en 2025 · Données Meta Business Suite</p>
+          </article>
+          <article class="result-card">
+            <div class="result-card__head">
+              <h3>ATK Music</h3>
+              <p class="result-card__meta">TikTok · Création & stratégie de contenu</p>
+            </div>
+            <div class="result-stats" aria-label="Statistiques ATK Music TikTok">
+              <div class="stat"><strong>1,8 M</strong><span>de vues</span></div>
+              <div class="stat"><strong>+22,7 K</strong><span>abonnés nets</span></div>
+              <div class="stat"><strong>198,7 K</strong><span>likes</span></div>
+              <div class="stat"><strong>7,7 K</strong><span>partages</span></div>
+            </div>
+            <p class="body-text">
+              Développement d’un compte personnel autour de formats courts : idées, rythme, montage et compréhension des codes de diffusion.
+            </p>
+            <p class="result-source">Octobre 2025 → août 2026 · Données TikTok Analytics</p>
+          </article>
+        </div>
+      </section>
+
       <section id="services" class="section" aria-label="Services">
         <div class="section__head">
-          <span class="label">03 / Services</span>
+          <span class="label">04 / Services</span>
           <h2>Prestations vidéo.</h2>
         </div>
         <div class="services-grid">
@@ -797,7 +919,7 @@
               <div>
                 <h3>Production de contenu mensuelle</h3>
                 <p class="price">À partir de 700 € / mois</p>
-                <p class="body-text">Un rythme régulier pour produire et monter vos contenus. On choisit les bons formats, on garde une cohérence visuelle et je vous aide à transformer vos idées en vidéos publiables.</p>
+                <p class="body-text">Un accompagnement régulier pour ne plus avoir à improviser ses contenus. On définit les formats du mois, je les tourne et les monte, puis je peux prendre en charge la rédaction des descriptions et la programmation des publications. Les contenus évoluent ensuite selon les résultats observés.</p>
               </div>
             </article>
             <article class="service-item">
@@ -815,8 +937,8 @@
       <section id="contact" class="section" aria-label="Contact">
         <div class="contact-grid">
           <div class="contact-card">
-            <span class="label">04 / Contact</span>
-            <h2>Parlons de ton projet.</h2>
+            <span class="label">05 / Contact</span>
+            <h2>Un projet vidéo ou besoin de contenu régulier ? Parlons-en.</h2>
             <p class="body-text" style="margin-top: 24px;">
               Parle-moi simplement de ton activité ou de ton projet, de ce que tu aimerais montrer
               et de l'endroit où la vidéo sera diffusée. Si l'idée n'est pas encore claire, on la construit ensemble.
