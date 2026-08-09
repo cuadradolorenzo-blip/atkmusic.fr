@@ -1,0 +1,17 @@
+# TEMPORAIRE — rediriger les pages ATKMusic vers La Vision.
+# Pour revenir à l'ancien site : supprimer ce fichier public/_redirects puis build + push.
+# On redirige seulement les pages HTML connues, pas les médias/assets.
+
+/ /lavision/ 302
+/about /lavision/ 302
+/about/ /lavision/ 302
+/contact /lavision/ 302
+/contact/ /lavision/ 302
+/services /lavision/ 302
+/services/ /lavision/ 302
+/vision /lavision/ 302
+/vision/ /lavision/ 302
+/mentions-legales /lavision/ 302
+/mentions-legales/ /lavision/ 302
+/confidentialite /lavision/ 302
+/confidentialite/ /lavision/ 302
