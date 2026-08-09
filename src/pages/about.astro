@@ -1,86 +1,27 @@
 ---
-import "../styles/global.css";
-
-const year = new Date().getFullYear();
+const target = "/lavision/";
 ---
-
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>À propos — ATK Music</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta http-equiv="refresh" content="0; url=/lavision/" />
+    <link rel="canonical" href="https://atkmusic.fr/lavision/" />
+    <title>Redirection vers La Vision — ATK Music</title>
+    <script is:inline>
+      window.location.replace('/lavision/');
+    </script>
+    <style>
+      html, body { height: 100%; margin: 0; background: #050505; color: #f7f2ea; font-family: Arial, sans-serif; }
+      body { display: grid; place-items: center; text-align: center; padding: 24px; }
+      a { color: inherit; font-weight: 700; }
+    </style>
   </head>
-  <body class="bg-gray-950 text-white">
-    <!-- Navbar -->
-    <nav class="w-full bg-gray-950/80 backdrop-blur border-b border-white/10 fixed top-0 z-50">
-      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="/" class="flex items-center space-x-3">
-          <div class="flex items-center justify-center w-12 h-12 bg-white rounded-full overflow-hidden">
-            <img src="/images/LOGOVF.png" alt="ATK Music Logo" class="h-12 w-auto scale-120" />
-          </div>
-          <span class="font-bold text-lg">ATK Music</span>
-        </a>
-        <ul class="hidden md:flex space-x-8 font-medium">
-          <li><a href="/" class="hover:text-blue-400 transition">Accueil</a></li>
-          <li><a href="/services" class="hover:text-blue-400 transition">Services</a></li>
-          <li><a href="/about" class="text-blue-400 font-semibold">À propos</a></li>
-          <li><a href="/contact" class="hover:text-blue-400 transition">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <main class="pt-28 max-w-4xl mx-auto px-6 py-16">
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-8">À propos</h1>
-
-      <p class="text-lg text-gray-300 mb-6">
-        Je m’appelle <strong>Lorenzo Cuadrado</strong> (ATKama), fondateur d’<strong>ATK Music</strong>. 
-        Mon parcours a commencé dans le <strong>beatmaking et la production musicale</strong>, 
-        avant d’évoluer vers le <strong>sound design</strong>, le <strong>mixage/mastering</strong> et 
-        la création de <strong>contenus audio/vidéo</strong> pour des entreprises et créateurs.
-      </p>
-
-      <p class="text-lg text-gray-300 mb-6">
-        ATK Music est né d’une conviction : le son est un levier puissant pour marquer les esprits. 
-        Qu’il s’agisse de donner de l’impact à un spot publicitaire ou d’accompagner un artiste dans la 
-        construction de son identité, mon objectif reste le même : <em>transformer une idée en expérience mémorable</em>.
-      </p>
-
-      <div class="mt-12 p-8 rounded-2xl bg-white/5 border border-white/10 space-y-6">
-        <h2 class="text-2xl font-bold mb-4">Deux univers, une même passion</h2>
-        <p class="text-gray-300">
-          ATK Music s’adresse aujourd’hui à deux publics complémentaires :
-        </p>
-        <ul class="list-disc pl-6 space-y-2 text-gray-300">
-          <li><span class="font-semibold text-blue-400">👔 Entreprises</span> — Création de contenus impactants : mixage, sound design, voix-off, montage et stratégie audio/vidéo.</li>
-          <li><span class="font-semibold text-purple-400">🎤 Artistes</span> — Coaching personnalisé pour développer son identité, son contenu et sa créativité.</li>
-        </ul>
-        <p class="text-gray-300">
-          Ces deux approches se nourrissent mutuellement : l’exigence technique acquise auprès des entreprises 
-          me permet d’apporter aux artistes une vision professionnelle, et la créativité artistique nourrit 
-          des productions originales pour les marques.
-        </p>
-      </div>
-
-      <div class="mt-16 p-8 rounded-2xl bg-white/5 border border-white/10">
-        <h2 class="text-2xl font-bold mb-4">Pourquoi choisir ATK Music ?</h2>
-        <ul class="list-disc pl-6 space-y-2 text-gray-300">
-          <li>🎧 Expertise à la fois artistique et technique</li>
-          <li>⚡ Capacité à adapter mes services à des besoins variés</li>
-          <li>📢 Accompagnement personnalisé, que vous soyez une entreprise ou un artiste</li>
-          <li>🎬 Vision globale : son + image pour un rendu cohérent</li>
-        </ul>
-      </div>
-
-      <div class="mt-16 text-center">
-        <a href="/contact" class="px-8 py-4 rounded-xl bg-blue-500 hover:bg-blue-600 font-medium">
-          Discutons de votre projet
-        </a>
-      </div>
+  <body>
+    <main>
+      <p>Redirection vers <a href="/lavision/">La Vision</a>…</p>
     </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
-      <p>© {year} ATK Music — Tous droits réservés</p>
-    </footer>
   </body>
 </html>
