@@ -123,14 +123,24 @@
       background: radial-gradient(circle, rgba(124,44,255,.38), transparent 65%); opacity: .72;
     }
     .book {
-      position: relative; width: min(410px, 86%); transform: perspective(1300px) rotateY(-8deg) rotateX(2deg);
+      position: relative; width: min(410px, 86%);
+      /* Pas de perspective 3D ici : elle compressait visuellement la couverture et donnait un rendu écrasé. */
+      transform: rotate(-1deg);
       filter: drop-shadow(0 28px 36px rgba(0,0,0,.26));
     }
     .book::after {
-      content: ""; position: absolute; inset: 0 -12px 0 auto; width: 12px; border-radius: 0 12px 12px 0;
+      content: ""; position: absolute; inset: 0 -10px 0 auto; width: 10px; border-radius: 0 12px 12px 0;
       background: linear-gradient(90deg, #2c173f, #130a1e); transform: skewY(-2deg); transform-origin: left top;
     }
-    .cover { width: 100%; border-radius: 9px 4px 4px 9px; border: 1px solid rgba(255,255,255,.14); }
+    .cover {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 679 / 960;
+      object-fit: contain;
+      border-radius: 9px 4px 4px 9px;
+      border: 1px solid rgba(255,255,255,.14);
+    }
     .badge {
       position: absolute; right: -22px; bottom: 8%; z-index: 3;
       background: var(--surface-solid); border: 1px solid var(--line); border-radius: 18px;
